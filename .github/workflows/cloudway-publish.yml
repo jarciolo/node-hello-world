@@ -1,6 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
+name:  website Deploy
 on: [push]
 
 jobs:
@@ -9,17 +10,18 @@ jobs:
     name: A job to say hello
     steps:
       # To use this repository's private action, you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: hello
+      - name: 'Checkout Github Action' 
+        uses: actions/checkout@master
+      - name: executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
         with:
-          cloudways_username: ${{ secrets.CLOUDWAYS_METADEV_USER }}
-          cloudways_server: ${{ secrets.CLOUDWAYS_METADEV_IP }}
-          cloudways_deploy_path: '~/public_html/wp-content/themes/test-theme'
-          cloudways_ssh_private_key: ${{ secrets.TEST_CW_SSH_PRIVATE_KEY }}
-          build_script: node -v; \
-            composer --version; \
-            npm --version"
-            #build_script: "npm install && composer install --no-dev --no-scripts"
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            ls -al
+
+
+
