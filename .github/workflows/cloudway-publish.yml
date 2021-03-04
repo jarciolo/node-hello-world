@@ -17,7 +17,8 @@ jobs:
         with:
           host: ${{ secrets.CLOUDWAYS_METADEV_IP }}
           username: ${{ secrets.CLOUDWAYS_METADEV_USER }}
-          key: ${{ secrets.TEST_CW_SSH_PRIVATE_KEY }}
+          #key: ${{ secrets.TEST_CW_SSH_PRIVATE_KEY }}
+          password: ${{ secrets.CLOUDWAYS_METADEV_PASS }}
           port: 22
           script: |
             whoami
