@@ -15,10 +15,10 @@ jobs:
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
+          host: ${{ secrets.CLOUDWAYS_METADEV_IP }}
+          username: ${{ secrets.CLOUDWAYS_METADEV_USER }}
+          key: ${{ secrets.TEST_CW_SSH_PRIVATE_KEY }}
+          port: 22
           script: |
             whoami
             ls -al
