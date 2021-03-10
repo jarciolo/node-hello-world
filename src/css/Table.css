@@ -1,0 +1,21 @@
+.appContent{
+    position: relative;
+}
+.content{
+    background-color: #161f2d;
+    padding: 30px;
+    height: calc(100vh - 116px);
+    }
+.main{
+    padding: 0px 60px 0px 60px;
+    position: absolute;
+    top:50%;
+}
+.table-container .rdt_TableHeader{
+    background: #161f2d;
+    color: #ffffff;
+    font-size: 16px;
+}
+.rdt_TableHeadRow{
+    background-color: #161f2d !important;
+}

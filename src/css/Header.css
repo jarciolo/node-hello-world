@@ -1,0 +1,25 @@
+.header {
+    height: 200px;
+    align-items: flex-start !important;
+    border-radius: 15px;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+    background-color: #152fa5!important;
+    }
+    
+    .navList a{
+        color:#ffffff !important;
+        font-size: 12px;
+    }
+    .form-control{
+        background-color: #152fa5 !important;
+        color:#ffffff !important;
+        font-size: 12px !important;
+    }
+    .form-control:focus{
+        box-shadow: none !important;
+    }
+    .pl1{
+       padding-left: 1px;
+    }
+    
