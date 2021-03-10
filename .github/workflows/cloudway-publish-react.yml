@@ -6,7 +6,7 @@ name:  cloudway deploy
 on: 
     push:
       branches:
-        - main
+        - vimal-dev
 
 jobs:
   hello_world_job:
